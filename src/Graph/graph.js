@@ -1,7 +1,7 @@
 import Queue from '../Queue/queue';
 
 // 封装图结构
-export class Graph {
+export class GraphData {
 
   constructor() {
     this.vertexes = [];       // 顶点列表
@@ -15,6 +15,9 @@ export class Graph {
   }
 
   // addEdge(v1, v2) 添加无向边
+  // 在两个顶点之间添加一条无向边。由于是无向图，需要同时在两个顶点的邻接表中添加对方
+  // v1 -> v2：v2 被添加到 v1 的邻接列表中
+  // v2 -> v1：v1 被添加到 v2 的邻接列表中
   addEdge(v1, v2) {
     this.adjList.get(v1).push(v2);
     this.adjList.get(v2).push(v1);

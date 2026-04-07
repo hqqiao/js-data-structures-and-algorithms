@@ -1,9 +1,9 @@
-import { Graph } from './graph';
+import { GraphData } from './graph';
 
 // ---------------- 封装的图结构测试 ---------------- //
 console.log('// ----- 图结构测试 START -----//');
 
-const graph = new Graph();
+const graph = new GraphData();
 
 // addVertex() 添加顶点
 const vertexes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
